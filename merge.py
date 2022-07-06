@@ -12,4 +12,4 @@ class Solution_heapq:
         return median(list(merge(nums1, nums2)))
 
 shq = Solution_heapq()
-print(shq.srm_heapq([1, 3], [2, 0]))
+print(shq.srm_heapq([1, 3], [2]))
