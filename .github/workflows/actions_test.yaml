@@ -45,5 +45,11 @@ jobs:
           pr_body: "Automated Pull Request"
           pr_reviewer: "jraghurajshetty"
           pr_assignee: "jraghurajshetty"
-      
-      
+          
+      - name: Merge Pull request to main
+        if: steps.open-pr.outputs.pr_number != ''
+        uses: peter-evans/enable-pull-request-automerge@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
+          merge-method: merge
