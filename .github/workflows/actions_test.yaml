@@ -43,13 +43,13 @@ jobs:
           destination_branch: ${{ github.event.repository.default_branch }}
           pr_title: "[Automated] Merge ${{ github.ref_name }} into ${{ github.event.repository.default_branch }}"
           pr_body: "Automated Pull Request"
-          #pr_reviewer: "raghurajshetty"
-          #pr_assignee: "raghurajshetty"
+          pr_reviewer: "raghurajshetty"
+          pr_assignee: "raghurajshetty"
           
-      - name: Merge Pull request to main
-        if: steps.open-pr.outputs.pr_number != ''
-        uses: peter-evans/enable-pull-request-automerge@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
-          merge-method: merge
+      #- name: Merge Pull request to main
+      #  if: steps.open-pr.outputs.pr_number != ''
+      #  uses: peter-evans/enable-pull-request-automerge@v2
+      #  with:
+      #   token: ${{ secrets.GITHUB_TOKEN }}
+      #    pull-request-number: ${{ steps.open-pr.outputs.pr_number }}
+      #    merge-method: merge
