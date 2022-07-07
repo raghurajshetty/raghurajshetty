@@ -43,8 +43,8 @@ jobs:
           destination_branch: ${{ github.event.repository.default_branch }}
           pr_title: "[Automated] Merge ${{ github.ref_name }} into ${{ github.event.repository.default_branch }}"
           pr_body: "Automated Pull Request"
-          pr_reviewer: "jraghurajshetty"
-          pr_assignee: "jraghurajshetty"
+          pr_reviewer: "raghurajshetty"
+          pr_assignee: "raghurajshetty"
           
       - name: Merge Pull request to main
         if: steps.open-pr.outputs.pr_number != ''
