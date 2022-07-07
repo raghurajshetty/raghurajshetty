@@ -32,8 +32,6 @@ jobs:
     steps:
       - name: git repo checkout
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 # Code taken from https://www.jessesquires.com/blog/2022/03/26/gh-action-merge-release-to-main/
       - name: Create pull request
         id: open-pr
